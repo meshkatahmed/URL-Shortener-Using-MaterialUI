@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Button from '@mui/material/Button';
+import Autocomplete from '@mui/material/Autocomplete';
+import { TextField } from '@mui/material';
 
+const hello = ['ami','tumi','se'];
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button variant="contained">Text</Button>
+      <Button>Contained</Button>
+      <Button variant="outlined">Outlined</Button>
+      <Autocomplete disablePortal id="combo-box-demo" options={hello} sx={{ width: 300 }} renderInput={(params) => <TextField {...params} label="Movie" />} />
     </div>
   );
 }
